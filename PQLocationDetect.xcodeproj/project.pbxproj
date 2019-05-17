@@ -14,6 +14,9 @@
 		A6E9AEB8228A6F15002BCAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E9AEB6228A6F15002BCAED /* LaunchScreen.storyboard */; };
 		A6E9AEC3228A6F15002BCAED /* PQLocationDetectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E9AEC2228A6F15002BCAED /* PQLocationDetectTests.swift */; };
 		A6E9AECE228A6F15002BCAED /* PQLocationDetectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E9AECD228A6F15002BCAED /* PQLocationDetectUITests.swift */; };
+		A6E9AF67228A7861002BCAED /* SwiftOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E9AF66228A7861002BCAED /* SwiftOSC.framework */; };
+		A6E9AF68228A793F002BCAED /* SwiftOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E9AF66228A7861002BCAED /* SwiftOSC.framework */; };
+		A6E9AF69228A793F002BCAED /* SwiftOSC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6E9AF66228A7861002BCAED /* SwiftOSC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A6E9AF6A228A7940002BCAED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A6E9AF69228A793F002BCAED /* SwiftOSC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A6E9AEAA228A6F13002BCAED /* PQLocationDetect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PQLocationDetect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E9AEAD228A6F13002BCAED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +64,7 @@
 		A6E9AEC9228A6F15002BCAED /* PQLocationDetectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PQLocationDetectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E9AECD228A6F15002BCAED /* PQLocationDetectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PQLocationDetectUITests.swift; sourceTree = "<group>"; };
 		A6E9AECF228A6F15002BCAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6E9AF66228A7861002BCAED /* SwiftOSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftOSC.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E9AF68228A793F002BCAED /* SwiftOSC.framework in Frameworks */,
+				A6E9AF67228A7861002BCAED /* SwiftOSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +101,7 @@
 				A6E9AEC1228A6F15002BCAED /* PQLocationDetectTests */,
 				A6E9AECC228A6F15002BCAED /* PQLocationDetectUITests */,
 				A6E9AEAB228A6F13002BCAED /* Products */,
+				A6E9AF5D228A73E8002BCAED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +146,14 @@
 			path = PQLocationDetectUITests;
 			sourceTree = "<group>";
 		};
+		A6E9AF5D228A73E8002BCAED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6E9AF66228A7861002BCAED /* SwiftOSC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +164,7 @@
 				A6E9AEA6228A6F13002BCAED /* Sources */,
 				A6E9AEA7228A6F13002BCAED /* Frameworks */,
 				A6E9AEA8228A6F13002BCAED /* Resources */,
+				A6E9AF6A228A7940002BCAED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -433,6 +463,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8C8NQVQ32;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PQLocationDetect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +485,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8C8NQVQ32;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PQLocationDetect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
